@@ -1,0 +1,30 @@
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@10.197.14.207:1521/IPCCUAT
+    username: pp_icfd
+    password: ppicfd123#@!
+    driver-class-name: oracle.jdbc.OracleDriver
+  application:
+    name: IPCC-Whitelist
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 5
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  port: 8080
+
+ivr:
+  defaults:
+    service-line: L2222
+    dnis: 2222
+    account-manager: Falcon
